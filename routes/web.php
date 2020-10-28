@@ -60,3 +60,8 @@ Route::get('user/create',
     [\App\Http\Controllers\Backend\UserController::class,'create'])->name('user.create');
 Route::post('user/store',
     [\App\Http\Controllers\Backend\UserController::class,'store'])->name('user.store');
+Route::get('products',
+    [\App\Http\Controllers\Backend\ProductsController::class,'index'])->name('products.index');
+
+Route::get('categoris',
+    [\App\Http\Controllers\Backend\CategoryController::class,'index'])->name('categoris.index');

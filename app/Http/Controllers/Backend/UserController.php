@@ -6,12 +6,15 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class UserController
 {
     public function index(){
-        $users = User::all();
+        $users = User::paginate(2);
+//        $users = DB::table('users')->get();
+//        dd($users);
         return view('backend.users.index',[
             'users' => $users
         ]);

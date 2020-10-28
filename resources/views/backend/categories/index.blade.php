@@ -50,18 +50,18 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($products as $products)
+                            @foreach($category as $category)
                             <tr>
 
-                                <td>{{$products->id}}</td>
-                                <td>{{$products->name}}</td>
-                                <td>{{$products->status}}</td>
+                                <td>{{$category->id}}</td>
+                                <td>{{$category->name}}</td>
+
 
                             </tr>
                             @endforeach
                             </tbody>
                         </table>
-                        {{ $products->links() }}
+                        {{ $category->links() }}
                     </div>
                     <!-- /.card-body -->
                 </div>
