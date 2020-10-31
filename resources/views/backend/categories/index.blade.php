@@ -50,7 +50,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($category as $category)
+                            @foreach($categories as $category)
                             <tr>
 
                                 <td>{{$category->id}}</td>
@@ -61,7 +61,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {{ $category->links() }}
+                        {{ $categories->links() }}
                     </div>
                     <!-- /.card-body -->
                 </div>

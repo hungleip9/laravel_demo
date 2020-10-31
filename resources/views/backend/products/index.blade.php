@@ -44,18 +44,20 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Tên sản phẩm</th>
+                                <th>Danh muc</th>
                                 <th>Thời gian</th>
                                 <th>Status</th>
                                 <th>Mô tả</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($products as $products)
+                            @foreach($products as $product)
                             <tr>
 
-                                <td>{{$products->id}}</td>
-                                <td>{{$products->name}}</td>
-                                <td>{{$products->status}}</td>
+                                <td>{{$product->id}}</td>
+                                <td>{{$product->name}}</td>
+                                <td>{{$product->category->name}}</td>
+                                <td>{{$product->status}}</td>
 
                             </tr>
                             @endforeach

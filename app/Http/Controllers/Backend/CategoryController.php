@@ -10,9 +10,9 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     public function index(){
-        $category = Category::paginate(5);
+        $categories = Category::paginate(5);
         return view('backend.categories.index',[
-            'category' => $category
+            'categories' => $categories
         ]);
 
     }

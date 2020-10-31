@@ -56,6 +56,8 @@ Route::get('task/products',
     [\App\Http\Controllers\Task\TaskController::class,'products'])->name('task.products');
 Route::get('user',
     [\App\Http\Controllers\Backend\UserController::class,'index'])->name('user.index');
+Route::get('user/info',
+    [\App\Http\Controllers\Backend\UserController::class,'test'])->name('user.info');
 Route::get('user/create',
     [\App\Http\Controllers\Backend\UserController::class,'create'])->name('user.create');
 Route::post('user/store',
@@ -63,5 +65,5 @@ Route::post('user/store',
 Route::get('products',
     [\App\Http\Controllers\Backend\ProductsController::class,'index'])->name('products.index');
 
-Route::get('categoris',
-    [\App\Http\Controllers\Backend\CategoryController::class,'index'])->name('categoris.index');
+Route::get('categories',
+    [\App\Http\Controllers\Backend\CategoryController::class,'index'])->name('categories.index');
