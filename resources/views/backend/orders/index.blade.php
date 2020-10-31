@@ -43,27 +43,30 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Tên danh muc</th>
-                                <th>Show san pham</th>
-                                <th>Thời gian</th>
-                                <th>Status</th>
-                                <th>Mô tả</th>
+                                <th>Show Product</th>
+                                <th>User_id</th>
+                                <th>Product_id</th>
+                                <th>Money</th>
+
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($categories as $category)
+                            @foreach($orders as $order)
                             <tr>
 
-                                <td>{{$category->id}}</td>
-                                <td>{{$category->name}}</td>
-                                <td><a href="{{route('categories.show',$category->id)}}">Show</a></td>
+                                <td>{{$order->id}}</td>
+                                <td><a href="{{route('order.showProducts',$order->id)}}">Show</a></td>
+                                <td>{{$order->user_id}}</td>
+                                <td>{{$order->product_id}}</td>
+                                <td>{{$order->money}}</td>
+
 
 
                             </tr>
                             @endforeach
                             </tbody>
                         </table>
-                        {{ $categories->links() }}
+                        {{ $orders->links() }}
                     </div>
                     <!-- /.card-body -->
                 </div>

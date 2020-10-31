@@ -14,4 +14,10 @@ class Product extends Model
     public function order(){
         return $this->belongsToMany(Order::class);
     }
+    public function image(){
+        return $this->hasMany(Image::class);
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

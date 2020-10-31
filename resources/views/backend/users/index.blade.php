@@ -42,6 +42,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Tên</th>
+                                <th>San Pham</th>
                                 <th>Email</th>
                                 <th>Thời gian</th>
                                 <th>Quyen</th>
@@ -53,6 +54,7 @@
                             <tr>
                                 <td>{{$user->id}}</td>
                                 <td>{{$user->name}}</td>
+                                <td><a href="{{route('user.showProducts',$user->id)}}">Show</a></td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->created_at}}</td>
                                 @if($user->status==1)

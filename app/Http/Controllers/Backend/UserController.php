@@ -46,6 +46,13 @@ class UserController
         $user->save();
         return redirect()->route('user.index');
     }
+    public function showProduct($id){
+        $user = User::find($id);
+        $products = $user->product;
+        foreach ($products as $product){
+            echo $product->name."\n";
+        }
+    }
     public function test(){
 //        $user = User::find(1);
 ////        dd($user->userInfo->fullname);
@@ -54,6 +61,7 @@ class UserController
 //        $user_info = UserInfo::find(1);
 //        $user = $user_info->user;
 //        dd($user->email);
+        //quan he 1 nhieu
 //        $category = Category::find(1);
 //        $products = $category->products;
 ////        dd($products);

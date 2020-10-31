@@ -46,6 +46,7 @@
                                 <th>Tên sản phẩm</th>
                                 <th>Danh muc</th>
                                 <th>Thời gian</th>
+                                <th>Images</th>
                                 <th>Status</th>
                                 <th>Mô tả</th>
                             </tr>
@@ -58,6 +59,8 @@
                                 <td>{{$product->name}}</td>
                                 <td>{{$product->category->name}}</td>
                                 <td>{{$product->status}}</td>
+                                <td><a href="{{route('products.show',$product->id)}}">Show</a></td>
+
 
                             </tr>
                             @endforeach

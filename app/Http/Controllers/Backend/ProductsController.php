@@ -16,4 +16,12 @@ class ProductsController extends Controller
         ]);
 
     }
+    public function showImages($id){
+        $product = Product::find($id);
+        $images = $product->image;
+        foreach ( $images as $image ){
+            echo $image->name."\n";
+        }
+    }
+
 }

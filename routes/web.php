@@ -62,8 +62,17 @@ Route::get('user/create',
     [\App\Http\Controllers\Backend\UserController::class,'create'])->name('user.create');
 Route::post('user/store',
     [\App\Http\Controllers\Backend\UserController::class,'store'])->name('user.store');
+Route::get('user/{id}/showProducts',
+    [\App\Http\Controllers\Backend\UserController::class,'showProduct'])->name('user.showProducts');
 Route::get('products',
     [\App\Http\Controllers\Backend\ProductsController::class,'index'])->name('products.index');
-
+Route::get('products/{id}/show',
+    [\App\Http\Controllers\Backend\ProductsController::class,'showImages'])->name('products.show');
 Route::get('categories',
     [\App\Http\Controllers\Backend\CategoryController::class,'index'])->name('categories.index');
+Route::get('categories/{id}/show',
+    [\App\Http\Controllers\Backend\CategoryController::class,'showProducts'])->name('categories.show');
+Route::get('order/{id}/showProducts',
+    [\App\Http\Controllers\Backend\OrderController::class,'showProducts'])->name('order.showProducts');
+Route::get('orders',
+    [\App\Http\Controllers\Backend\OrderController::class,'index'])->name('orders.index');
