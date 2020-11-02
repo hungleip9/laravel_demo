@@ -19,9 +19,9 @@ class CategoryController extends Controller
     public function showProducts($id){
         $category = Category::find($id);
         $products = $category->product;
-        foreach ($products as $product){
-            echo $product->name."\n";
-        }
+        return view('backend.categories.showProduct',[
+            'products' => $products
+        ]);
 
 
     }

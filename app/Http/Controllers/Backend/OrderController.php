@@ -19,8 +19,8 @@ class OrderController extends Controller
     {
         $order = Order::find($id);
         $products = $order->products;
-        foreach ($products as $product) {
-            echo $product->name . "\n";
-        }
+        return view('backend.orders.showProduct',[
+            'products' => $products
+        ]);
     }
 }

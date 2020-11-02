@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f73d90a-fc99-4e56-9097-b2ce1ef995ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/categories/showProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/orders/showProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/products/showImage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/users/showProduct.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProductsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Images.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/categories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/products/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/orders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/orders/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +148,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/orders" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Freshshop/freshshop/index.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -161,14 +159,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel_demo\resources\views\backend\orders" />
-      <recent name="C:\xampp\htdocs\laravel_demo\resources\views\backend\categories" />
-      <recent name="C:\xampp\htdocs\laravel_demo\database\migrations" />
-      <recent name="C:\xampp\htdocs\laravel_demo\app" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laravel_demo\app\Http\Controllers\Backend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravel_demo\resources\views\backend\orders" />
+      <recent name="C:\xampp\htdocs\laravel_demo\resources\views\backend\products" />
+      <recent name="C:\xampp\htdocs\laravel_demo\resources\views\backend\categories" />
+      <recent name="C:\xampp\htdocs\laravel_demo\resources\views\backend\users" />
+      <recent name="C:\xampp\htdocs\laravel_demo\database\migrations" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,7 +190,8 @@
       <workItem from="1603887659699" duration="4272000" />
       <workItem from="1603971280104" duration="9558000" />
       <workItem from="1604126745884" duration="614000" />
-      <workItem from="1604132628362" duration="6981000" />
+      <workItem from="1604132628362" duration="7445000" />
+      <workItem from="1604283595836" duration="3167000" />
     </task>
     <servers />
   </component>
@@ -207,10 +207,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="347" y="61" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1604153370569" />
-    <state x="410" y="61" key="FileChooserDialogImpl" timestamp="1604134329690">
+    <state x="410" y="61" key="FileChooserDialogImpl" timestamp="1604286129711">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="410" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604134329690" />
+    <state x="410" y="61" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604286129711" />
     <state x="346" y="28" key="NewPhpClassDialog" timestamp="1603556069104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

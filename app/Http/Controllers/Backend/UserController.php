@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\DB;
 class UserController
 {
     public function index(){
-        $users = User::paginate(2);
+        $users = User::paginate(5);
 //        $users = DB::table('users')->get();
 //        dd($users);
         return view('backend.users.index',[
@@ -49,9 +49,9 @@ class UserController
     public function showProduct($id){
         $user = User::find($id);
         $products = $user->product;
-        foreach ($products as $product){
-            echo $product->name."\n";
-        }
+        return view('backend.users.showProduct',[
+            'products' => $products
+        ]);
     }
     public function test(){
 //        $user = User::find(1);

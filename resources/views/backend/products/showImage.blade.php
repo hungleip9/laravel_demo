@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Order</h1>
+                <h1 class="m-0 text-dark">Show Image</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -43,22 +43,18 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Show Product</th>
-                                <th>User_id</th>
-                                <th>Product_id</th>
-                                <th>Money</th>
+                                <th>Name Image</th>
+
 
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($orders as $order)
+                            @foreach($images as $image)
                             <tr>
 
-                                <td>{{$order->id}}</td>
-                                <td><a href="{{route('order.showProducts',$order->id)}}">Show</a></td>
-                                <td>{{$order->user_id}}</td>
-                                <td>{{$order->product_id}}</td>
-                                <td>{{$order->money}}</td>
+                                <td>{{$image->id}}</td>
+                                <td>{{$image->name}}</td>
+
 
 
 
@@ -66,7 +62,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {{ $orders->links() }}
+
                     </div>
                     <!-- /.card-body -->
                 </div>

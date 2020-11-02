@@ -32,12 +32,43 @@ Route::get('/', function () {
 //    Route::get("complete/{id?}", "TaskController@complete");
 //    Route::get("reComplete/{id?}", "TaskController@reComplete");
 //});
+Route::prefix('user')->group(function () {
+    Route::get('/',
+        [\App\Http\Controllers\Backend\UserController::class,'index'])->name('user.index');
+    Route::get('info',
+        [\App\Http\Controllers\Backend\UserController::class,'test'])->name('user.info');
+    Route::get('create',
+        [\App\Http\Controllers\Backend\UserController::class,'create'])->name('user.create');
+    Route::post('store',
+        [\App\Http\Controllers\Backend\UserController::class,'store'])->name('user.store');
+    Route::get('{id}/showProducts',
+        [\App\Http\Controllers\Backend\UserController::class,'showProduct'])->name('user.showProducts');
+});
+Route::prefix('products')->group(function (){
+    Route::get('/',
+        [\App\Http\Controllers\Backend\ProductsController::class,'index'])->name('products.index');
+    Route::get('{id}/show',
+        [\App\Http\Controllers\Backend\ProductsController::class,'showImages'])->name('products.show');
+});
+Route::prefix('categories')->group(function (){
+    Route::get('/',
+        [\App\Http\Controllers\Backend\CategoryController::class,'index'])->name('categories.index');
+    Route::get('{id}/show',
+        [\App\Http\Controllers\Backend\CategoryController::class,'showProducts'])->name('categories.show');
+});
+Route::prefix('order')->group(function (){
+    Route::get('{id}/showProducts',
+        [\App\Http\Controllers\Backend\OrderController::class,'showProducts'])->name('order.showProducts');
+    Route::get('/',
+        [\App\Http\Controllers\Backend\OrderController::class,'index'])->name('order.index');
+});
 Route::get('task',
     [\App\Http\Controllers\Task\TaskController::class,'index'])
     ->name('task.index');
 Route::get('task/create',
     [\App\Http\Controllers\Task\TaskController::class,'create'])
     ->name('task.create');
+
 Route::post('task',
     [\App\Http\Controllers\Task\TaskController::class,'store'])->name('task.store');
 Route::get('task/{id}/edit',
@@ -54,25 +85,10 @@ Route::get('task/dashboard',
     [\App\Http\Controllers\Task\TaskController::class,'dashboard'])->name('task.dashboard');
 Route::get('task/products',
     [\App\Http\Controllers\Task\TaskController::class,'products'])->name('task.products');
-Route::get('user',
-    [\App\Http\Controllers\Backend\UserController::class,'index'])->name('user.index');
-Route::get('user/info',
-    [\App\Http\Controllers\Backend\UserController::class,'test'])->name('user.info');
-Route::get('user/create',
-    [\App\Http\Controllers\Backend\UserController::class,'create'])->name('user.create');
-Route::post('user/store',
-    [\App\Http\Controllers\Backend\UserController::class,'store'])->name('user.store');
-Route::get('user/{id}/showProducts',
-    [\App\Http\Controllers\Backend\UserController::class,'showProduct'])->name('user.showProducts');
-Route::get('products',
-    [\App\Http\Controllers\Backend\ProductsController::class,'index'])->name('products.index');
-Route::get('products/{id}/show',
-    [\App\Http\Controllers\Backend\ProductsController::class,'showImages'])->name('products.show');
-Route::get('categories',
-    [\App\Http\Controllers\Backend\CategoryController::class,'index'])->name('categories.index');
-Route::get('categories/{id}/show',
-    [\App\Http\Controllers\Backend\CategoryController::class,'showProducts'])->name('categories.show');
-Route::get('order/{id}/showProducts',
-    [\App\Http\Controllers\Backend\OrderController::class,'showProducts'])->name('order.showProducts');
-Route::get('orders',
-    [\App\Http\Controllers\Backend\OrderController::class,'index'])->name('orders.index');
+
+
+
+
+
+
+
